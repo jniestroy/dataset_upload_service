@@ -42,7 +42,7 @@ def result():
         #if valid metadata post identifer on ors
         if valid['valid']:
 
-            req = requests.put("https://ors:8080/uid/test/",json = result,verify = False)
+            req = requests.put("http://uvadcos.io/id/UVA/",json = result,verify = False)
 
             if req.json().get('created'):
                 full_id = req.json()['created']['@id']
