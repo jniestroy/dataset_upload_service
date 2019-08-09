@@ -1,0 +1,13 @@
+<html>
+   <body>
+     <p>Metadata posted with Identifier: {{ id }}</p>
+     <p>In namesapce: uid/{{name}}</p>
+      <form action = "http://localhost:5001/uploader" method = "POST"
+         enctype = "multipart/form-data">
+         <input type="hidden" name="Id" value="{{id}}" />
+         <input type="hidden" name="namespace" value="{{name}}" />
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+      </form>
+   </body>
+</html>
