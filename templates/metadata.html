@@ -1,7 +1,7 @@
 <html>
    <body>
      <p>Input Object Metadata</p>
-      <form action = "http://localhost:5001/post-object" method = "POST">
+      <form action = "http://localhost:5005/post-object" method = "POST">
          <p>Type: <input type = "text" name = "@type" /></p>
          <p>Name: <input type = "text" name = "name" /></p>
          <p>Description: <input type = "text" name = "description" /></p>
@@ -10,7 +10,7 @@
          <p><input type = "submit" value = "submit" /></p>
       </form>
       <p>Upload json with object metadata</p>
-      <form action = "http://localhost:5001/post-object" method = "POST"
+      <form action = "http://localhost:5005/post-object" method = "POST"
          enctype = "multipart/form-data">
          <input type = "file" name = "file" />
          <input type = "submit"/>
