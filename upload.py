@@ -38,9 +38,13 @@ def result():
                 return("Error parsing given file. Please post a json file.")
 
         #With given metadata validate using service
+        result = dict(result)
+        if not result.get('identifier'):
+
+            result['identifier'] = 'tmp'
         req = requests.post(url = "http://validator:5000/validatejson",json = result)
         valid = req.json()
-
+        return(valid)
         #if valid metadata post identifer on ors
         if valid['valid']:
 
