@@ -44,7 +44,7 @@ def result():
             result['identifier'] = 'tmp'
         req = requests.post(url = "http://validator:5000/validatejson",json = result)
         valid = req.json()
-        
+
         #if valid metadata post identifer on ors
         if valid['valid']:
 
@@ -63,7 +63,7 @@ def result():
 
                 _,_,base,namespace,name,id = full_id.split('/')
 
-                return redirect("http://localhost:5001/upload/"+ name + '/'+ id,code = 302)
+                return redirect("http://localhost:5005/upload/"+ name + '/'+ id,code = 302)
 
             #Only time mine failed to post was if test namespace wasnt made
             else:

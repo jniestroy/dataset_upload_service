@@ -1,7 +1,125 @@
 <html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <style>
+
+  header {
+    font-family: 'Raleway', sans-serif;
+/*    border-bottom: 2px solid grey;*/
+  }
+
+  label {
+    display: inline-block;
+    width: 140px;
+    text-align: left;
+  }​
+
+  header h1 {
+    font-size: 45;
+    display: inline;
+    padding-right: 30px;
+  }
+
+  header a {
+    font-size: 25;
+    color: black;
+    text-decoration: none;
+  }
+
+  header a:hover {
+    color: white;
+    background: black;
+  }
+
+
+  header ul {
+    list-style-type: none;
+    text-align: left;
+    margin: 0;
+    padding: 0px;
+  }
+
+
+
+  header li {
+    display: inline-block;
+    padding-right: 5%;
+  }
+
+  header form {
+    display: inline;
+  }
+
+
+  header input[type=text] {
+
+    font-family: 'Raleway', sans-serif;
+    border: none;
+    text-align: center;
+    margin: 0;
+    padding: 0px;
+    border-bottom: 0.5px solid grey;
+  }
+
+  header input[type=submit] {
+
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    border: none;
+  }
+
+  header input[type=submit]:hover {
+    background-color: black;
+    color: white;
+  }
+
+  </style>
+</head>
+
+<header>
+
+      <ul>
+
+        <li>
+          <h1>ORS+</h1>
+        </li>
+
+        <li>
+          <a href="/about">About</a>
+        </li>
+
+        <li>
+          <a href="/doc">Documentation</a>
+        </li>
+
+        <li>
+          <a href="/swagger">OpenAPI</a>
+        </li>
+
+        <li>
+          <a href="/oauth/authorize">Login</a>
+        </li>
+
+        <li>
+          <form action="/search" type="submit">
+            <input type="text" id="query" placeholder="Full Text Search">
+            <input type="submit" value="Search">
+          </form>
+        </li>
+      </ul>
+
+
+</header>
    <body>
+     <h1>Post Object to Minio</h1>
+     <h3>Identifier successfully minted</h3>
      <p>Metadata posted with Identifier: {{ id }}</p>
      <p>In namesapce: uid/{{name}}</p>
+     <h3>Please choose file to upload:</h3>
       <form action = "http://localhost:5005/uploader" method = "POST"
          enctype = "multipart/form-data">
          <input type="hidden" name="Id" value="{{id}}" />
