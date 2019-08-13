@@ -44,7 +44,7 @@ def result():
             result['identifier'] = 'tmp'
         req = requests.post(url = "http://validator:5000/validatejson",json = result)
         valid = req.json()
-        return(valid)
+        
         #if valid metadata post identifer on ors
         if valid['valid']:
 

@@ -1,15 +1,139 @@
 <html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <style>
+
+  header {
+    font-family: 'Raleway', sans-serif;
+/*    border-bottom: 2px solid grey;*/
+  }
+
+  label {
+    display: inline-block;
+    width: 140px;
+    text-align: left;
+  }​
+
+  header h1 {
+    font-size: 45;
+    display: inline;
+    padding-right: 30px;
+  }
+
+  header a {
+    font-size: 25;
+    color: black;
+    text-decoration: none;
+  }
+
+  header a:hover {
+    color: white;
+    background: black;
+  }
+
+
+  header ul {
+    list-style-type: none;
+    text-align: left;
+    margin: 0;
+    padding: 0px;
+  }
+
+
+
+  header li {
+    display: inline-block;
+    padding-right: 5%;
+  }
+
+  header form {
+    display: inline;
+  }
+
+
+  header input[type=text] {
+
+    font-family: 'Raleway', sans-serif;
+    border: none;
+    text-align: center;
+    margin: 0;
+    padding: 0px;
+    border-bottom: 0.5px solid grey;
+  }
+
+  header input[type=submit] {
+
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    border: none;
+  }
+
+  header input[type=submit]:hover {
+    background-color: black;
+    color: white;
+  }
+
+  </style>
+</head>
+
+<header>
+
+      <ul>
+
+        <li>
+          <h1>ORS+</h1>
+        </li>
+
+        <li>
+          <a href="/about">About</a>
+        </li>
+
+        <li>
+          <a href="/doc">Documentation</a>
+        </li>
+
+        <li>
+          <a href="/swagger">OpenAPI</a>
+        </li>
+
+        <li>
+          <a href="/oauth/authorize">Login</a>
+        </li>
+
+        <li>
+          <form action="/search" type="submit">
+            <input type="text" id="query" placeholder="Full Text Search">
+            <input type="submit" value="Search">
+          </form>
+        </li>
+      </ul>
+
+
+</header>
+
    <body>
-     <p>Input Object Metadata</p>
+     <h1>Dataset Upload Service</h1>
+     <h3>Input Object Metadata</h3>
+
       <form action = "http://localhost:5005/post-object" method = "POST">
-         <p>Type: <input type = "text" name = "@type" /></p>
-         <p>Name: <input type = "text" name = "name" /></p>
-         <p>Description: <input type = "text" name = "description" /></p>
-         <p>Author: <input type ="text" name = "author" /></p>
-         <p>Date Created: <input type ="text" name = "dateCreated" /></p>
+         <label>Type: <input type = "text" name = "@type" /></label>
+         <p></p>
+         <label>Name: <input type = "text" name = "name" /></label>
+         <p></p>
+         <label>Description: <input type = "text" name = "description" /></label>
+         <p></p>
+         <label>Author: <input type ="text" name = "author" /></label>
+         <p></p>
+         <label>Date Created: <input type ="text" name = "dateCreated" /></label>
          <p><input type = "submit" value = "submit" /></p>
       </form>
-      <p>Upload json with object metadata</p>
+      <h3>Upload JSON with Object Metadata</h3>
+      <p></p>
       <form action = "http://localhost:5005/post-object" method = "POST"
          enctype = "multipart/form-data">
          <input type = "file" name = "file" />
